@@ -1,4 +1,4 @@
-package lsh.agenda1.page;
+package lsh.agenda1.ui;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;

@@ -1,4 +1,4 @@
-package lsh.agenda1.page;
+package lsh.agenda1.ui;
 
 import java.util.ArrayList;
 import java.util.Arrays;
