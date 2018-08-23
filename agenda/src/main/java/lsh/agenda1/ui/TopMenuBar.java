@@ -19,7 +19,7 @@ public class TopMenuBar extends MenuBar{
 	private TopMenuBar() {}
 	
 	public static TopMenuBar newInstance() {
-		String[] fileMenuItemNames = {"日计划","周计划","月度计划","季度计划","年度计划","人生计划"};
+		String[] fileMenuItemNames = {"任务","日计划","周计划","月度计划","季度计划","年度计划","人生计划"};
 		String[] editMenuItemNames = {"撤销","恢复","剪切","粘贴","复制"};
 		
 		List<MenuItem> fileMenuItems = MenuFactory.getMenuItems(

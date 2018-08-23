@@ -16,7 +16,7 @@ public class FMatter {
 	private SimpleStringProperty planEndDateTime;
 	private SimpleStringProperty realBeginDateTime;
 	private SimpleStringProperty relaEndDateTime;
-	private SimpleBooleanProperty isFinished;
+	private SimpleBooleanProperty finished;
 	private SimpleIntegerProperty totalTaskAmount;
 	private SimpleIntegerProperty remainingTaskAmount;
 	
@@ -88,10 +88,10 @@ public class FMatter {
 		this.relaEndDateTime = new SimpleStringProperty(relaEndDateTime);
 	}
 	public boolean isFinished() {
-		return isFinished.get();
+		return finished.get();
 	}
-	public void setFinished(boolean isFinished) {
-		this.isFinished = new SimpleBooleanProperty(isFinished);
+	public void setFinished(boolean finished) {
+		this.finished = new SimpleBooleanProperty(finished);
 	}
 	public int getTotalTaskAmount() {
 		return totalTaskAmount.get();
