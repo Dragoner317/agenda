@@ -28,7 +28,7 @@ public class IndexPageController extends AnchorPane{
 	}
 	
 	public void onclickAgendaCreate() {
-		
+		System.out.println("创建日程");
 	}
 	
 	public void onclickAgendaLook() {
@@ -36,14 +36,20 @@ public class IndexPageController extends AnchorPane{
 	}
 	
 	public void onclickMemoCreate() {
-		
+		System.out.println("创建备忘录");
 	}
 	
-	public void onclickMemoLook() {}
+	public void onclickMemoLook() {
+		System.out.println("查看备忘录");
+	}
 	
-	public void onclickMatterCreate() {}
+	public void onclickMatterCreate() {
+		System.out.println("创建事情");
+	}
 	
-	public void onclickMatterLook() {}
+	public void onclickMatterLook() {
+		System.out.println("查看事情");
+	}
 	
 	public void onclickKnowledgeLook() {
 		System.out.println("show me a knowledge classify table");

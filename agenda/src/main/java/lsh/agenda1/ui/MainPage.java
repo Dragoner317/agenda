@@ -29,7 +29,7 @@ public class MainPage extends Application{
 		stage = primaryStage;
 		stage.setMinWidth(MIN_WINDOW_WIDTH);
 		stage.setMinHeight(MIN_WINDOW_HEIGHT);
-		stage.setTitle("自我管理控制台");      
+		stage.setTitle("工作台");      
 		gotoMainPage();
 		stage.show();
 	}
