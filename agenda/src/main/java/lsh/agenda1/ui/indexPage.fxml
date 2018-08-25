@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="lsh.agenda1.ui.controller.IndexPageController">
+	<children>
+		<MenuBar prefHeight="27.0" prefWidth="800.0" fx:id="menuBar">
+			<menus>
+				<Menu mnemonicParsing="false" text="日程">
+					<items>
+						<MenuItem mnemonicParsing="false" text="新建" onAction="#onclickAgendaCreate"/>
+						<MenuItem mnemonicParsing="false" text="查看" onAction="#onclickAgendaLook"/>
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="备忘录">
+					<items>
+						<MenuItem mnemonicParsing="false" text="新建" onAction="#onclickMemoCreate"/>
+						<MenuItem mnemonicParsing="false" text="查看" onAction="#onclickMemoLook"/>
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="事情">
+					<items>
+						<MenuItem mnemonicParsing="false" text="新建" onAction="#onclickMatterCreate"/>
+						<MenuItem mnemonicParsing="false" text="查看" onAction="#onclickMatterLook"/>
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="知识">
+					<items>
+						<MenuItem mnemonicParsing="false" text="查看" onAction="#onclickKnowledgeLook"/>
+						<MenuItem mnemonicParsing="false" text="编辑" onAction="#onclickKnowledgeEdit"/>
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</children>
+</AnchorPane>
