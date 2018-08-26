@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.shape.*?>
@@ -7,41 +9,87 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TabPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
 	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-	prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
 	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="lsh.agenda1.ui.controller.IndexPageController">
-	<children>
-		<MenuBar prefHeight="27.0" prefWidth="800.0" fx:id="menuBar">
+	fx:controller="lsh.agenda1.ui.IndexPageController">
+	<top>
+		<MenuBar prefHeight="0.0" prefWidth="601.0"
+			BorderPane.alignment="CENTER">
 			<menus>
 				<Menu mnemonicParsing="false" text="日程">
 					<items>
-						<MenuItem mnemonicParsing="false" text="新建" onAction="#onclickAgendaCreate"/>
-						<MenuItem mnemonicParsing="false" text="查看" onAction="#onclickAgendaLook"/>
+						<MenuItem mnemonicParsing="false" text="新建" />
+						<MenuItem mnemonicParsing="false" text="查看" />
+						<Menu mnemonicParsing="false" text="日记">
+							<items>
+								<MenuItem mnemonicParsing="false" text="事情" />
+								<MenuItem mnemonicParsing="false" text="心情" />
+								<MenuItem mnemonicParsing="false" text="记忆" />
+								<MenuItem mnemonicParsing="false" text="新鲜" />
+								<MenuItem mnemonicParsing="false" text="性格" />
+							</items>
+						</Menu>
+						<MenuItem mnemonicParsing="false" text="备忘录整理" />
 					</items>
 				</Menu>
 				<Menu mnemonicParsing="false" text="备忘录">
 					<items>
-						<MenuItem mnemonicParsing="false" text="新建" onAction="#onclickMemoCreate"/>
-						<MenuItem mnemonicParsing="false" text="查看" onAction="#onclickMemoLook"/>
+						<MenuItem mnemonicParsing="false" text="新建"
+							onAction="#onclickMemoCreate" />
+						<MenuItem mnemonicParsing="false" text="查看"
+							onAction="#onclickMemoLook" />
 					</items>
 				</Menu>
 				<Menu mnemonicParsing="false" text="事情">
 					<items>
-						<MenuItem mnemonicParsing="false" text="新建" onAction="#onclickMatterCreate"/>
-						<MenuItem mnemonicParsing="false" text="查看" onAction="#onclickMatterLook"/>
+						<MenuItem mnemonicParsing="false" text="新建" />
+						<MenuItem mnemonicParsing="false" text="查看" />
 					</items>
 				</Menu>
 				<Menu mnemonicParsing="false" text="知识">
 					<items>
-						<MenuItem mnemonicParsing="false" text="查看" onAction="#onclickKnowledgeLook"/>
-						<MenuItem mnemonicParsing="false" text="编辑" onAction="#onclickKnowledgeEdit"/>
+						<MenuItem mnemonicParsing="false" text="新建" />
+						<MenuItem mnemonicParsing="false" text="查看" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="配置">
+					<items>
+						<MenuItem mnemonicParsing="false" text="备忘录配置"
+							onAction="#onclickMemoConfig" />
+						<MenuItem mnemonicParsing="false" text="事情配置" />
+						<MenuItem mnemonicParsing="false" text="知识配置" />
+						<MenuItem mnemonicParsing="false" text="日记配置" />
 					</items>
 				</Menu>
 			</menus>
 		</MenuBar>
-	</children>
-</AnchorPane>
+	</top>
+	<center>
+		<TabPane prefHeight="200.0" prefWidth="200.0" fx:id="centerPane"
+			tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+			<tabs>
+				<Tab text="Untitled Tab 1">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0"
+							prefHeight="180.0" prefWidth="200.0" />
+					</content>
+				</Tab>
+				<Tab text="Untitled Tab 2">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0"
+							prefHeight="180.0" prefWidth="200.0" />
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</center>
+	<left>
+		<TreeView fx:id="leftPane" prefHeight="400.0"
+			prefWidth="89.0" BorderPane.alignment="CENTER" />
+	</left>
+</BorderPane>

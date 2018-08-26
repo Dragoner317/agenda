@@ -47,7 +47,7 @@ public class TableViewOfMatterInput extends Application {
     private final ObservableList<FMatter> data = FXCollections.observableArrayList();
     final HBox hb = new HBox();
  
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         launch(args);
     }
  
