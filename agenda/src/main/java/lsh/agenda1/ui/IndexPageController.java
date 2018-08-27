@@ -1,16 +1,37 @@
 package lsh.agenda1.ui;
 
 
+
+import javafx.application.Application;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.DialogEvent;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.SelectionModel;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import lsh.agenda1.ui.controller.MemoDialogController;
+import lsh.agenda7.util.Translate;
 
 public class IndexPageController extends BorderPane{
 	private WorkStation app;
@@ -38,6 +59,10 @@ public class IndexPageController extends BorderPane{
 		this.app = app;
 	}
 	
+	public WorkStation getApp() {
+		return app;
+	}
+	
 	public void onclickAgendaCreate() {
 		System.out.println("创建日程");
 	}
@@ -48,18 +73,27 @@ public class IndexPageController extends BorderPane{
 	
 	public void onclickMemoCreate() {
 		System.out.println("创建备忘录");
-		TableView<Object> tableView = new TableView<Object>();
-		TableColumn<Object,String> col1 = new TableColumn<>("备忘录顺序");
-		TableColumn<Object,String> col2 = new TableColumn<>("备忘录创建时间");
-		tableView.getColumns().addAll(col1,col2);
-		Tab tab = new Tab();
-		tab.setText("测试Tab");
-		tab.setContent(tableView);
-		SelectionModel<Tab> select = centerPane.getSelectionModel();
-		centerPane.getTabs().add(tab);
-		select.select(tab);
-//		sp.getChildren().add(tableView);
-//		this.setCenter(sp);
+		Dialog dialog = new Dialog<>();
+		DialogPane dp = new DialogPane();
+		GridPane gridPane = new GridPane();
+		dp.setMinWidth(600);
+		dp.setMinHeight(500);
+		gridPane.setAlignment(Pos.CENTER);
+		dialog.setDialogPane(dp);
+		dialog.getDialogPane().getButtonTypes().addAll(ButtonType.CLOSE,ButtonType.CANCEL,ButtonType.NEXT);
+		dialog.show();
+		
+		
+//		TableView<Object> tableView = new TableView<Object>();
+//		TableColumn<Object,String> col1 = new TableColumn<>("备忘录顺序");
+//		TableColumn<Object,String> col2 = new TableColumn<>("备忘录创建时间");
+//		tableView.getColumns().addAll(col1,col2);
+//		Tab tab = new Tab();
+//		tab.setText("测试Tab");
+//		tab.setContent(tableView);
+//		SelectionModel<Tab> select = centerPane.getSelectionModel();
+//		centerPane.getTabs().add(tab);
+//		select.select(tab);
 	}
 	
 	public void onclickMemoLook() {

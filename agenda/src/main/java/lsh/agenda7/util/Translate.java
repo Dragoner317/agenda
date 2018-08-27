@@ -10,6 +10,7 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import lsh.agenda1.ui.WorkStation;
 
@@ -57,6 +58,26 @@ public final class Translate {
 		stage.setScene(scene);
 		stage.sizeToScene();
 		return (Node)loader.getController();
+	}
+	
+	public static GridPane getDialog(String fxml) {
+		FXMLLoader loader = new FXMLLoader();
+		InputStream in = WorkStation.class.getResourceAsStream(fxml);
+//		loader.setBuilderFactory(new JavaFXBuilderFactory());
+		loader.setLocation(WorkStation.class.getResource(fxml));
+		GridPane page = null;
+		try {
+			page = (GridPane)loader.load(in);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				in.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}		
+		return page;
 	}
 	
 	

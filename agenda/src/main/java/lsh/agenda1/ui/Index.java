@@ -16,7 +16,7 @@ public class Index extends Application{
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		//step1:创建登录界面基本元素
-		Text text1 = ModuleFactory.newText("账号：");
+		Text text1 = ModuleFactory.newText("账号："); 
 		Text text2 = ModuleFactory.newText("密码：");
 		TextField tf = ModuleFactory.newTextField();
 		PasswordField pf = ModuleFactory.newPasswordField();

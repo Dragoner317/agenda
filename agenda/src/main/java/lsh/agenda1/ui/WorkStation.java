@@ -36,5 +36,12 @@ public class WorkStation extends Application{
 			}
 		});
 	}
+	
+	public Stage getStage() {
+		return stage;
+	}
+	public void setStage(Stage stage) {
+		this.stage = stage;
+	}
 
 }
